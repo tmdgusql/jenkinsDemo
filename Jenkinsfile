@@ -11,11 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                def dateFormat = new SimpleDateFormat("yyyyMMddHHmm")
-                def date = new Date()
-                def TODAY = dateFormat.format(date)
-    
-                echo ${TODAY}
+                echo LocalDate.Now()
             }
         }
         stage('Deploy') {
