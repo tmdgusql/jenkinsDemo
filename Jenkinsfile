@@ -1,4 +1,3 @@
-import java.text.SimpleDateFormat
 
 pipeline {
     agent any
@@ -11,7 +10,10 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo LocalDate.Now()
+                script {
+                   def now = new Date()
+                   println now.format("yyMMdd.HHmm", TimeZone.getTimeZone('UTC'))
+                }
             }
         }
         stage('Deploy') {
