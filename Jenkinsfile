@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                def dateFormat = new SimpleDateFormat("yyMMddHHmm")
+                def dateFormat = new SimpleDateFormat("yyyyMMddHHmm")
                 def date = new Date()
                 def TODAY = dateFormat.format(date)
     
