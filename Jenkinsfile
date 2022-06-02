@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 pipeline {
     agent any
 
@@ -9,7 +11,11 @@ pipeline {
         }
         stage('Test') {
             steps {
-                build 'mavenProject1'
+                def dateFormat = new SimpleDateFormat("yyMMddHHmm")
+                def date = new Date()
+                def TODAY = dateFormat.format(date)
+    
+                echo ${TODAY}
             }
         }
         stage('Deploy') {
