@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                    def now = new Date()
-                   println now.format("yyyyMMddHHmm", TimeZone.getTimeZone('UTC+9'))
+                   println now.format("yyyyMMddHHmm", TimeZone.getTimeZone('Asia/Seoul'))
                 }
             }
         }
