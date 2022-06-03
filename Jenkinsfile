@@ -1,6 +1,6 @@
 
 pipeline {
-    agent 'demoAgent'
+    agent any
 
     stages {
         stage('Build') {
